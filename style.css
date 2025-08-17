@@ -1,0 +1,319 @@
+/*
+    -----------------------
+    CSS Resets: Josh Caemue
+    -----------------------
+*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.3;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    /* display: grid;
+    place-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr-navy-950);
+    color: var(--clr-navy-200);
+    overflow-x: clip;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/*
+    -----------------------
+    CSS Variables: Reusable CSS Variables
+    -----------------------
+*/
+
+
+:root{
+    /* Colors */
+    --clr-purple-main: hsl(246, 80%, 60%);
+    --clr-purple-light: hsl(235, 45%, 61%);
+    --clr-work-card: hsl(15, 100%, 70%);
+    --clr-play-card: hsl(195, 74%, 62%);
+    --clr-study-card: hsl(348, 100%, 68%);
+    --clr-exercise-card: hsl(145, 58%, 55%);
+    --clr-social-card: hsl(264, 64%, 52%);
+    --clr-selfcare-card: hsl(43, 84%, 65%);
+    --clr-navy-950: hsl(226, 43%, 10%);
+    --clr-navy-900: hsl(235, 46%, 20%);
+    --clr-navy-200: hsl(236, 100%, 87%);
+
+    /* border-radius */
+    --border-radius: 0.75rem;
+
+    /* padding, margin etc */
+    --spacing-normal: 1.55rem;
+
+}
+
+/*
+    --------------------------------------------
+    Utlities CSS: Default CSS for common styling
+    --------------------------------------------
+*/
+
+button{
+  background: none;
+  border: none;
+  color: var(--clr-purple-light);
+  cursor: pointer;
+}
+
+/*
+    -----------------------
+    Layout CSS: Styling module etc
+    -----------------------
+*/
+
+
+/* main header */
+
+.main-header{
+    background-color: var(--clr-navy-900);
+    border-radius: var(--border-radius);
+    transform: translateY(20%);
+    width: 100%;
+    max-width: 320px;
+}
+
+/* @media(min-width: 760px){
+  .main-header{
+    transform: translateY(15%);
+  }
+} */
+
+.main-header .profile{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--clr-purple-main);
+    padding: 1.75rem 1.55rem;
+    border-radius: var(--border-radius);
+}
+
+.main-header .profile img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-navy-200);
+}
+
+.main-header .profile span{
+  font-size: 14px;
+}
+
+h1{
+  font-weight: 300;
+  font-size: clamp(1.55rem, 1.2155rem + 1.4272vw, 2.5rem);
+}
+
+.nav-btn{
+  display: flex;
+  justify-content: space-between;
+  /* min-width: 100%; */
+  padding: var(--spacing-normal);
+  gap: 0.5rem;
+}
+
+.main-header--btn.active{
+  color: var(--clr-navy-200);
+}
+
+
+/* display cards */
+.routine-cards{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%,320px),1fr)); */
+  /* justify-content: center;
+  align-items: stretch; */
+  gap: 4rem;
+}
+
+
+@media(min-width: 1024px){
+  .routine-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "header card1 card2 card3"
+      "header  card4 card5 card6";
+    align-items: stretch;
+    
+  }
+
+  .main-header{
+    grid-area: header;
+    align-self: stretch;
+    transform: translateY(0);
+    min-height: 100%;
+  }
+
+  .routine-cards .work{
+    grid-area: card1;
+  }
+
+  .routine-cards .play{
+    grid-area: card2;
+  }
+
+  .routine-cards .study{
+    grid-area: card3;
+  }
+
+  .routine-cards .exercise{
+    grid-area: card4;
+  }
+
+  .routine-cards .social{
+    grid-area: card5;
+  }
+
+  .routine-cards .self-care{
+    grid-area: card6;
+  }
+
+  .main-header .profile{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background-color: var(--clr-purple-main);
+    padding: 1.75rem 1.55rem;
+    border-radius: var(--border-radius);
+    height: 70%;
+  }
+
+  .nav-btn{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 30%;
+    padding: var(--spacing-normal);
+  }
+  
+}
+
+.container{
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.card-content{
+  padding: var(--spacing-normal);
+  background-color: var(--clr-navy-900);
+  border-radius: var(--border-radius);
+  transform: translateY(30%);
+}
+
+.card-content button{
+  color: var(--clr-navy-200);
+}
+
+.card-first--line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 0.35rem;
+}
+
+.card-second--line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(min-width: 760px){
+  .card-second--line{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.routine-cards .work{
+  background: url('images/icon-work.svg');
+  background-color: var(--clr-work-card);
+}
+
+.routine-cards .play{
+  background: url('images/icon-play.svg');
+  background-color: var(--clr-play-card);
+}
+
+.routine-cards .study{
+  background: url('images/icon-study.svg');
+  background-color: var(--clr-study-card);
+}
+
+.routine-cards .exercise{
+  background: url('images/icon-exercise.svg');
+  background-color: var(--clr-exercise-card);
+}
+
+.routine-cards .social{
+  background: url('images/icon-social.svg');
+  background-color: var(--clr-social-card);
+}
+
+.routine-cards .self-care{
+  background: url('images/icon-self-care.svg');
+  background-color: var(--clr-selfcare-card);
+}
+
+.routine-cards .bg-card{
+  border-radius: var(--border-radius);
+  background-position: 100% -25%;
+  background-repeat: no-repeat;
+  max-width: 320px;
+  width: 100%;
+}
+
+h2{
+  font-size: 1.75rem;
+  font-weight: 300;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Font Awsome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main>
+    
+    <!-- Module-1: Daily Routines -->
+    <div class="container">
+      <section class="routine-cards">
+        <!-- Dashboard User Profile -->
+        <div class="main-header">
+          <div class="profile">
+            <img src="images/image-jeremy.png" alt="" aria-hidden="true">
+            <span class="profile-name">
+              Report For
+              <h1 class="name">
+                Jeremy <br> Robson
+              </h1>
+            </span>
+          </div>
+          <div class="nav-btn">
+            <button type="button" class="main-header--btn active daily">Daily</button>
+            <button type="button" class="main-header--btn weekly">Weekly</button>
+            <button type="button" class="main-header--btn monthly">Monthly</button>
+          </div>
+        </div>
+        <!-- daily work schedule -->
+        <div class="work bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                Work
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                5hrs
+              </h2>
+              <span class="last-date">
+                Previous - 7hrs
+              </span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- daily play schedule -->
+        <div class="play bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                play
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                1hrs
+              </h2>
+              <span class="last-date">
+                Previous - 2hrs
+              </span>
+            </div>
+          </div>
+        </div>
+         <!-- daily study schedule -->
+         <div class="study bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                Study
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                0hrs
+              </h2>
+              <span class="last-date">
+                Previous - 1hrs
+              </span>
+            </div>
+          </div>
+        </div>
+         <!-- daily exercise schedule -->
+         <div class="exercise bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                Exercise
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                1hrs
+              </h2>
+              <span class="last-date">
+                Previous - 2hrs
+              </span>
+            </div>
+          </div>
+        </div>
+         <!-- daily social schedule -->
+         <div class="social bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                Social
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                1hrs
+              </h2>
+              <span class="last-date">
+                Previous - 3hrs
+              </span>
+            </div>
+          </div>
+        </div>
+         <!-- daily slefcare schedule -->
+         <div class="self-care bg-card">
+          <div class="card-content">
+            <div class="card-first--line">
+              <p>
+                Self-care
+              </p>
+              <button type="button" class="card-option--btn">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+            <div class="card-second--line">
+              <h2>
+                0hrs
+              </h2>
+              <span class="last-date">
+                Previous - 1hrs
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+<script src="main.js"></script>
+</body>
+</html>
