@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Git Repo Link](https://github.com/qayoommunawar/time-tracking-dashobard)
+- Live Site URL: [Live Site Demo](https://qayoommunawar.github.io/time-tracking-dashobard/)
 
 ## My process
 
@@ -84,5 +84,21 @@ fetch('data.json')
 
 ### Continued development
 
-Would love to make the design similar to the original in case of dashobard cards.
+Would love to make the design similar to the original in case of dashobard cards. for now i used background property 
+css style  as follows:
+```CSS
+  .routine-cards .self-care{
+  background: url('images/icon-self-care.svg');
+  background-color: var(--clr-selfcare-card);
+  }
+  
+  .routine-cards .bg-card{
+    border-radius: var(--border-radius);
+    background-position: 100% -25%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+    width: 100%;
+  } 
+
+```
 
